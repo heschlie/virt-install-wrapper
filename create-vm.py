@@ -88,7 +88,8 @@ def main():
 
     print("Right, let's get " + args['name'] + " installed!")
 
-    output = subprocess.Popen(command, stdout=subprocess.PIPE, bufsize=1, universal_newlines=True, shell=True)
+    output = subprocess.Popen(command, stdout=subprocess.PIPE,
+                              bufsize=1, universal_newlines=True, shell=True)
     for line in output.stdout:
         print(line, end='')
 
